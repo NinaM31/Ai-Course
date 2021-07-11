@@ -16,6 +16,6 @@
 | موقع يقدم اسئلة تختبر فهمك للمادة |Webpage| [من الموقع الرئيسي](https://www.sanfoundry.com/artificial-intelligence-questions-answers/)|مهم جداً 🔥
 | PROPOSITIONAL LOGIC  |PDF| [من الموقع الرئيسي](https://www.cs.ox.ac.uk/people/michael.wooldridge/teaching/soft-eng/lect07.pdf)| نوعاً ما 💧
 | دورة مجانية يحيلها الكتاب   |Course| [من الموقع الرئيسي](https://www.edx.org/course/artificial-intelligence-ai)| نوعاً ما 💧
-| أكواد متعلقة في لكتاب   |Github| [من الموقع الرئيسي](https://github.com/aimacode)| مهم جداً 🔥 / 💧 نوعاً ما 
+| أكواد متعلقة في لكتاب   |Github| [من الموقع الرئيسي](https://github.com/aimacode)|   نوعاً ما 💧
 
 
