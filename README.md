@@ -9,7 +9,7 @@
 > ` العلم حق من حقوق الإنسان `
 ## 📚 المصادر المفيدة
 - 🔥 دمهم للنجاح في المادة
-- 🍧 شرح مفيد
+- 🍜 شرح مفيد
 - 🌱 معلومات مفيدة لك وليس للمادة
 - 💧 مهم لك لكن ليس ضروري للنجاح في المادة
 
@@ -18,7 +18,7 @@
 |Pseudocode |pdf| [من الموقع الرئيسي](http://aima.cs.berkeley.edu/algorithms.pdf)| عادي 💧
 |الموقع الرئيسي للكتاب |Webpage| [من الموقع الرئيسي](http://aima.cs.berkeley.edu/)| عادي 🌱
 | موقع يقدم اسئلة تختبر فهمك للمادة |Webpage| [من الموقع الرئيسي](https://www.sanfoundry.com/artificial-intelligence-questions-answers/)|مهم جداً 🔥
-| PROPOSITIONAL LOGIC  |PDF| [من الموقع الرئيسي](https://www.cs.ox.ac.uk/people/michael.wooldridge/teaching/soft-eng/lect07.pdf)| نوعاً ما 🍧
+| PROPOSITIONAL LOGIC  |PDF| [من الموقع الرئيسي](https://www.cs.ox.ac.uk/people/michael.wooldridge/teaching/soft-eng/lect07.pdf)| مفيد 🍜
 | دورة مجانية يحيلها الكتاب   |Course| [من الموقع الرئيسي](https://www.edx.org/course/artificial-intelligence-ai)| نوعاً ما 💧
 | أكواد متعلقة في لكتاب   |Github| [من الموقع الرئيسي](https://github.com/aimacode)|   نوعاً ما 💧
 
