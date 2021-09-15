@@ -3,7 +3,7 @@
 ## 👋 اهلاً 
 **The Primary Book:** Artificial Intelligence: A Modern Approach, *Textbook by Peter Norvig and Stuart J. Russell* 3rd edition.  
 
-**Me Explaining:** [هنا اشرح الكتاب بالتفصيل](https://www.youtube.com/channel/UCfZwKU3QJj42c_-1c2fng0Q)
+**Me Explaining:** [هنا اشرح الكتاب بالتفصيل](https://www.youtube.com/channel/UCfZwKU3QJj42c_-1c2fng0Q) 
 
 **Issue** كل الأكواد المتعلقة في الفيديو راح تحصلونها هنا. و اي استفسار او سؤال متعلق في الأكواد يمكنك ان ترفعها كا   
 > ` العلم حق من حقوق الإنسان `
