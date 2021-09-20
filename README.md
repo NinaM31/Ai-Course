@@ -18,7 +18,7 @@
 
 | المصدر| نوع| الرابط  |الأهمية
 |:-----:|:--------:|:------:|:-------:|
-|Pseudocode |pdf| [من الموقع الرئيسي](http://aima.cs.berkeley.edu/algorithms.pdf)| 🌱
+|Pseudocode |PDF| [من الموقع الرئيسي](http://aima.cs.berkeley.edu/algorithms.pdf)| 🌱
 |الموقع الرئيسي للكتاب |Webpage| [من الموقع الرئيسي](http://aima.cs.berkeley.edu/)| 💧
 | موقع يقدم اسئلة تختبر فهمك للمادة |Webpage| [من الموقع الرئيسي](https://www.sanfoundry.com/artificial-intelligence-questions-answers/)| 🔥
 | PROPOSITIONAL LOGIC  |PDF| [من الموقع الرئيسي](https://www.cs.ox.ac.uk/people/michael.wooldridge/teaching/soft-eng/lect07.pdf)| 🌱
