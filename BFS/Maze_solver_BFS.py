@@ -8,29 +8,28 @@ def BFS(problem):
     if problem.goal_test(c_node):
         return solution(c_node)
 
-    open_set = []  # FIFO queue/ frontier
+    frontier = []  # FIFO queue/ frontier
     explored_set = []
 
-    open_set.append(c_node)
+    frontier.append(c_node)
 
     while True:
         # لا يوجد حل
-        if len(open_set) == 0:
-            faliure = 'There is no availble path from {bgn} to {end}'
+        if len(frontier) == 0:
+            faliure = 'There is no availble path'
             return faliure
 
-        c_node = open_set.pop(0)  # First in First out
+        c_node = frontier.pop(0)  # First in First out
         explored_set.append(c_node)
 
         for action in problem.actions:
             child = child_node(problem, c_node, action)
-            if not child:
-                continue
+            if not child: continue
 
-            if child not in explored_set or child not in open_set:
+            if child not in explored_set and child not in frontier:
                 if problem.goal_test(child):
                     return solution(child)
-                open_set.append(child)
+                frontier.append(child)
 
 
 def solution(child):
@@ -64,7 +63,7 @@ def child_node(problem, c_node, action):
 
     elif action == 'D':
         i = i + 1
-        if i < len(problem.maze[i]) and problem.maze[i][j] != '#':
+        if i < len(problem.maze) and problem.maze[i][j] != '#':
             child = Node(i, j, c_node)
 
     return child

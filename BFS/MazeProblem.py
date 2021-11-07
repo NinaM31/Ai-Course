@@ -16,7 +16,8 @@ class Problem:
             ["#", " ", "#", " ", "#", " ", " ", " ", "#"],
             ["#", " ", "#", " ", "#", " ", "#", "#", "#"],
             ["#", " ", " ", " ", " ", " ", " ", " ", "#"],
-            ["#", "#", "#", "#", "#", "#", "#", "G", "#"], # j
+            ["#", "#", "#", "#", "#", "#", "#", "G", "#"], 
+              # j
         ]  # من دون البيئة هذا ما راح نقدر نتوصل الى حل
 
         self.initial_state, self.goal_state = self.get_init()
@@ -36,13 +37,15 @@ class Problem:
         return node == self.goal_state
 
     def print_maze(self, path):
-        # نطبع البيئة
-        for i, row in enumerate(self.maze):
-            for j, cell in enumerate(row):
-                if (i, j) in path:
-                    print('+ ', end="")
-                else:
-                    print(cell + " ", end="")
-            print()
+        if isinstance(path, str): print(path)
+        else:
+            # نطبع البيئة
+            for i, row in enumerate(self.maze):
+                for j, cell in enumerate(row):
+                    if (i, j) in path:
+                        print('+ ', end="")
+                    else:
+                        print(cell + " ", end="")
+                print()
 
-        print("Steps taken: ", len(path))
+            print("Steps taken: ", len(path))
