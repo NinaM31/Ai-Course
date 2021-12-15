@@ -33,10 +33,10 @@ Dungeon’s floor map file =
 3 2
 Obstacle to remove = 1
 Output:
-The shortest path without eliminating any obstacle is 10. Such path is (0,0) -> (0,1) -> 
-(0,2) -> (1,2) -> (2,2) -> (2,1) -> (2,0) -> (3,0) -> (4,0) -> (4,1) -> (4,2) ->
-The shortest path with one obstacle elimination at position (3,2) is 6. Such path is (0,0) 
--> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (4,2)
+Steps taken when when 0 obstacle removed = 10. 
+(0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (2,1) -> (2,0) -> (3,0) -> (4,0) -> (4,1) -> (4,2) ->
+Steps taken when when 1 or less obstacles removed = 6. 
+(0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (4,2)
 ```
 
 ### Example 2
@@ -51,6 +51,41 @@ Dungeon’s floor map file =
 1 2
 2 1
 Obstacle to remove = 1
-Output: -1
-No solution is found! We need to eliminate more obstacles to find such a walk.
+Output: 
+There is no availble path consider removing more obstacles: when  obstacles removed 0
+
+Steps taken when 1 or less obstacles removed = 6
+(0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (4,2) ->
+```
+
+# How to run GUI
+## Using exe
+go to dist\Game.exe double click it or from console starting at the root `Ai-Course`
+```
+TheDungeons\dist\Game.exe
+```
+The data files that are available:
+```
+data/test.txt
+data/test2.txt
+data/test3.txt
+data/test4.txt
+data/a.txt 
+```
+## From source code directly 
+starting from the `TheDungeons` folder
+```
+python -m venv venv
+venv\Scripts\activate
+pip intsall -r requirements
+python Game.py
+```
+
+# How to run Console
+starting from the `TheDungeons` folder
+```
+python -m venv venv
+venv\Scripts\activate
+pip intsall -r requirements
+python run.py
 ```
