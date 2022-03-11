@@ -15,7 +15,10 @@ from Utils import *
 
 
 def BFS(problem):
-    ''' Following the BFS pseudocode in the textbook '''
+    ''' 
+        Following the BFS pseudocode in the textbook 
+        Availablle: http://aima.cs.berkeley.edu/algorithms.pdf  Page5, Figure 3.9 (Breadth-first search)    
+    '''
 
     # 1. get initial state
     init_board_state = problem.init_board_state
