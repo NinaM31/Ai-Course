@@ -24,7 +24,7 @@
 | اسم المشروع |الصعوبة | الكود |
 |-------|---------------|---------------|
 |The Dungeons | سهل 🐔 | [code](https://github.com/NinaM31/Ai-Course/tree/main/TheDungeons)|
-|N Queen | صعب 🐉 | [code](#)
+|N Queen | صعب 🐉 | [code](https://github.com/NinaM31/Ai-Course/tree/main/NQueenHW)
 
 
 ## 📚 المصادر المفيدة
@@ -42,7 +42,3 @@
 | PROPOSITIONAL LOGIC  |PDF| [من الموقع الرئيسي](https://www.cs.ox.ac.uk/people/michael.wooldridge/teaching/soft-eng/lect07.pdf)| 🌱
 | دورة مجانية يشير الكتاب إليه   |Course| [من الموقع الرئيسي](https://www.edx.org/course/artificial-intelligence-ai)| 🍜
 | أكواد متعلقة في لكتاب   |Github| [من الموقع الرئيسي](https://github.com/aimacode)| 🍜
-
-
-fsdlkflk
-skdjflks
