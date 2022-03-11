@@ -8,11 +8,11 @@ class Problem:
         '''
 
         # 2 dim array with N col and N rows
-        self.board = [['0'] * N for _ in range(N)] 
+        self.board = [['.'] * N for _ in range(N)]
         self.N = N
 
         # initially empty
-        self.init_board_state = []
+        self.init_board_state = set()
 
 
     def is_queen_safe(self, q_pos, queens):
@@ -48,17 +48,10 @@ class Problem:
                 queens: array -> array of q_pos(row, col) of each queen
         '''
 
-        # check if N queens are on board
+        # check if all N queens are on board
         if len(queens) < self.N:
             return False
 
-        # check if any queen was attacked
-        for i, q1 in enumerate(queens):
-            for j, q2 in enumerate(queens):
-                if i != j:
-                    if self.is_attacked(q1, q2): return False
-        
-        # all queens are placed and non attacked
         return  True
 
 

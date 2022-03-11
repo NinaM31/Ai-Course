@@ -5,10 +5,11 @@
         python main.py -h
 
     Example:
-        python main.py 8 BFS
+        python main.py 5 BFS
 '''
 
 import argparse
+import time
 
 from Problem import Problem
 from Algorithms import *
@@ -37,7 +38,10 @@ is_supported = False
 
 if args.Algorithm == 'BFS':
     is_supported = True
+    
+    start_time = time.time()
     solution = BFS(problem)
+    print("--- %.2f seconds ---" % (time.time() - start_time))
 
 if is_supported:
     problem.print_board(solution)

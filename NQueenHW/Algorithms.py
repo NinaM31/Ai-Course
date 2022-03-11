@@ -11,6 +11,8 @@
         board that satisfies the goal state.
 '''
 
+import numpy as np 
+
 from Utils import *
 
 
@@ -20,35 +22,32 @@ def BFS(problem):
     # 1. get initial state
     init_board_state = problem.init_board_state
 
-    # 2. check if its the goal state
-    if problem.goal_test( init_board_state ): return init_board_state
-
-    # 3. create frontier and explored sets
-    explorded_set = [] # empty
-    frontier = [] # FIFO queue
-    frontier.append(init_board_state)
+    # 2. create frontier and explored sets
+    explorded_set = np.array([]) # empty
+    frontier = np.array([]) # FIFO queue
+    frontier = np.append(frontier, init_board_state)
     
-    # 4. while True
+    # 3. while True
     while True:
 
-        # 5. check if frontier empty
+        # 4. check if frontier empty
         if len(frontier) == 0 : return 'No Solution'
 
-        # 6. pop from FIFO and mark as explored
-        c_board_state = frontier.pop(0) # FIFO
-        explorded_set.append(c_board_state)
+        # 5. pop from FIFO and mark as explored
+        c_board_state, frontier = frontier[0], np.delete(frontier, 0, 0) # FIFO
+        explorded_set = np.append(explorded_set, c_board_state)
 
-        # 7. Transition model
+        # 6. Transition model
         for possible_board_state in expand(problem, c_board_state):
-
+            
             # if an empty array returned then skip it
             if len(possible_board_state) == 0:
                 continue
 
-            # 7.1. check if already explored
+            # 6.1. check if already explored
             if possible_board_state not in explorded_set and possible_board_state not in frontier:
-                # 7.2. check if goal state
+                # 6.2. check if goal state
                 if problem.goal_test( possible_board_state ): 
                     return possible_board_state
                 else:
-                    frontier.append(possible_board_state)
+                    frontier = np.append(frontier, possible_board_state)
