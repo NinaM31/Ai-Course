@@ -1,6 +1,3 @@
-import numpy as np 
-
-
 def expand(problem, c_board_state):
     '''
         get a list of possible places 1 queen can be placed
@@ -12,7 +9,7 @@ def expand(problem, c_board_state):
     '''
     
     # array of possible board state when adding 1 queen to c_board_state
-    possible_board_state = np.array([])
+    possible_board_state = []
 
     # loop over the board
     for i, row in enumerate(problem.board):
@@ -36,6 +33,6 @@ def expand(problem, c_board_state):
                 tmp.add(q_pos)
 
                 # append it to the list of possible states
-                possible_board_state = np.append(possible_board_state, tmp)
+                possible_board_state.append(tmp)
     
     return possible_board_state
