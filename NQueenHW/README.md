@@ -1,21 +1,16 @@
 # The N Queen Problem
 
-#### Run Example
-
+#### Run Example IDS
 ```
-python main.py 9 BFS
+python main.py 10 IDS
 ```
-![image](https://user-images.githubusercontent.com/57009004/157873192-d1b2cd5f-3b0b-4c6c-910d-9d221fe07d8f.png)
+![image](https://user-images.githubusercontent.com/57009004/158639988-0bfd9abf-30c7-46f4-81dc-920b1e6df4b7.png)
 
-```
-python main.py 8 BFS
-```
 
-![image](https://user-images.githubusercontent.com/57009004/157873540-362eb49b-3777-4400-9151-b4be56c54d18.png)
-
+#### Run Example BFS
 
 ```
 python main.py 10 BFS
 ```
 
-![image](https://user-images.githubusercontent.com/57009004/157875779-64fe0606-82e2-45cc-9133-1fb604182f29.png)
+![image](https://user-images.githubusercontent.com/57009004/158640800-2ee88081-25f7-4451-8174-4c4799603ee7.png)
