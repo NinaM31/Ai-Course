@@ -38,9 +38,14 @@ is_supported = False
 
 if args.Algorithm == 'BFS':
     is_supported = True
-    
     start_time = time.time()
     solution = BFS(problem)
+    print("--- %.2f seconds ---" % (time.time() - start_time))
+    
+elif args.Algorithm == 'IDS':
+    is_supported = True
+    start_time = time.time()
+    solution = ITERATIVE_DEEPENING_SEARCH(problem)
     print("--- %.2f seconds ---" % (time.time() - start_time))
 
 if is_supported:

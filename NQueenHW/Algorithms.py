@@ -7,7 +7,7 @@
 
     Logic:
         Instead of searching where to place the queen, think of the problem as what are-
-        the possible ways the board could looks like, and search for the-
+        the possible ways the board could look like, and search for the-
         board that satisfies the goal state.
 '''
 
@@ -15,10 +15,7 @@ from Utils import *
 
 
 def BFS(problem):
-    ''' 
-        Following the BFS pseudocode in the textbook 
-        Availablle: http://aima.cs.berkeley.edu/algorithms.pdf  Page5, Figure 3.9 (Breadth-first search)    
-    '''
+    ''' Following the BFS pseudocode in the textbook '''
 
     # 1. get initial state
     init_board_state = problem.init_board_state
@@ -32,7 +29,7 @@ def BFS(problem):
     while True:
 
         # 4. check if frontier empty
-        if len(frontier) == 0 : return 'No Solution'
+        if len(frontier) == 0 : return 'failure'
 
         # 5. pop from FIFO and mark as explored
         c_board_state = frontier.pop(0) # FIFO
@@ -52,3 +49,32 @@ def BFS(problem):
                     return possible_board_state
                 else:
                     frontier.append(possible_board_state)
+
+
+def ITERATIVE_DEEPENING_SEARCH(problem):
+    depth = 0
+    while True:
+        result = DEPTH_LIMITED_SEARCH(problem, depth)
+        if result != 'cutoff': return result
+        depth += 1
+    
+def DEPTH_LIMITED_SEARCH(problem, limit):
+    return RECURSIVE_DLS(problem.init_board_state, problem, limit)
+
+def RECURSIVE_DLS(c_board_state, problem, limit):
+    # Base Case
+    if problem.goal_test(c_board_state): return c_board_state
+    elif limit == 0: return 'cutoff'
+    else:
+        cutoff_occurred = False
+        for possible_board_state in expand(problem, c_board_state):
+
+            # if an empty array returned then skip it
+            if len(possible_board_state) == 0:
+                continue
+
+            result = RECURSIVE_DLS(possible_board_state, problem, limit-1)
+            if result == 'cutoff': cutoff_occurred = True
+            elif result != 'failure': return result
+        if cutoff_occurred : return 'cutoff' 
+        else: return 'failure'
