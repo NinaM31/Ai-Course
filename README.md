@@ -23,8 +23,8 @@
 ## المشاريع 
 | اسم المشروع |الصعوبة | الكود |
 |-------|---------------|---------------|
-|The Dungeons | سهل 🐔 | [code](https://github.com/NinaM31/Ai-Course/tree/main/TheDungeons)|
-|N Queen | صعب 🐉 | [code](https://github.com/NinaM31/Ai-Course/tree/main/NQueenHW)
+|The Dungeons | 🐔 | [code](https://github.com/NinaM31/Ai-Course/tree/main/TheDungeons)|
+|N Queen | 🐉 | [code](https://github.com/NinaM31/Ai-Course/tree/main/NQueenHW)
 
 
 ## 📚 المصادر المفيدة
