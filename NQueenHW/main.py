@@ -45,7 +45,7 @@ if args.Algorithm == 'BFS':
 elif args.Algorithm == 'IDS':
     is_supported = True
     start_time = time.time()
-    solution = ITERATIVE_DEEPENING_SEARCH(problem)
+    solution = IDS(problem)
     print("--- %.2f seconds ---" % (time.time() - start_time))
 
 if is_supported:

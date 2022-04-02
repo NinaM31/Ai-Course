@@ -1,9 +1,9 @@
 '''
     This File contains the algorithms that will solve the NQueen problem.
     The algorithms are based on the Pseudocode in the Artificial Intelligence: A Modern Approach, Textbook.
-    http://aima.cs.berkeley.edu/algorithms.pdf
+    from yanshengjia https://github.com/yanshengjia/ml-road/blob/master/resources/Artificial%20Intelligence%20-%20A%20Modern%20Approach%20(3rd%20Edition).pdf
 
-    Algorithms (BFS, IDS, GA)
+    Algorithms (BFS, IDS, A*, GA)
 
     Logic:
         Instead of searching where to place the queen, think of the problem as what are-
@@ -15,7 +15,7 @@ from Utils import *
 
 
 def BFS(problem):
-    ''' Following the BFS pseudocode in the textbook '''
+    ''' Following the BFS pseudocode in the textbook page 82'''
 
     # 1. get initial state
     init_board_state = problem.init_board_state
@@ -51,30 +51,41 @@ def BFS(problem):
                     frontier.append(possible_board_state)
 
 
-def ITERATIVE_DEEPENING_SEARCH(problem):
+def  IDS(problem):
+    ''' Following the IDS pseudocode in the textbook page 89'''
     depth = 0
     while True:
-        result = DEPTH_LIMITED_SEARCH(problem, depth)
+        result = DLS(problem, depth)
         if result != 'cutoff': return result
         depth += 1
-    
-def DEPTH_LIMITED_SEARCH(problem, limit):
-    return RECURSIVE_DLS(problem.init_board_state, problem, limit)
 
-def RECURSIVE_DLS(c_board_state, problem, limit):
+
+def DLS(problem, limit):
+    return RDLS(problem.init_board_state, problem, limit)
+
+
+def RDLS(c_board_state, problem, limit):
     # Base Case
     if problem.goal_test(c_board_state): return c_board_state
     elif limit == 0: return 'cutoff'
+
     else:
         cutoff_occurred = False
+        # Transition model
         for possible_board_state in expand(problem, c_board_state):
 
             # if an empty array returned then skip it
             if len(possible_board_state) == 0:
                 continue
+            
+            # Recursive case which can be [failure, cutoff or solution]
+            result = RDLS(possible_board_state, problem, limit-1)
 
-            result = RECURSIVE_DLS(possible_board_state, problem, limit-1)
+            # mark cutoff
             if result == 'cutoff': cutoff_occurred = True
+
+            # return solution
             elif result != 'failure': return result
-        if cutoff_occurred : return 'cutoff' 
-        else: return 'failure'
+        
+        if cutoff_occurred: return 'cutoff' 
+        return 'failure'
